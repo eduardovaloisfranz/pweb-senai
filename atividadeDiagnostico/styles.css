@@ -1,0 +1,107 @@
+body {
+    background-color: #ffea00;
+    
+}
+
+.olho {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #a60342;    
+    margin: 0 auto;
+}
+
+.olinho {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: white;    
+    margin:0 auto;
+    
+}
+
+.corpo {
+    margin: 0 auto;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    background-color: #e359cc;
+    height: 500px;
+    max-width: 280px;
+    box-shadow: 0px -5px #a60342;
+}
+
+.boca {
+    margin: 0 auto;
+    width: 75px;
+    height: 25px;
+    background-color: #cf345d;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.palito {
+    margin: 0 auto;
+    width: 65px;
+    height: 85px;
+    background-color: #ff8000;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    /* box-shadow: inset 0 40px 40px -40px #783c00; */
+    border-top: 10px solid #613f01;
+    
+
+}
+
+.flex {
+    display: flex;
+}
+
+#galo {
+    width: 100px;
+    height: 60px;
+    position: relative;
+    background-color: #fc81e8;
+    margin: 0 auto;
+    top: 100px;
+    left: 45px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(50deg)   
+   
+    
+}
+
+#rosto {
+    margin: 0 auto;
+    position: relative;
+    padding-top: 300px;
+
+}
+.alinhamento-central {
+    align-items: center;    
+    flex-direction: row;    
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 280px;    
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.olhares {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.column {
+    flex-direction: column;
+    margin: 0 auto;
+}
