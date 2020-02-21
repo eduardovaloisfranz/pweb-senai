@@ -1,0 +1,53 @@
+html, body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+header, main, footer {
+    display: flex;         
+}
+
+header {
+    margin: 0 auto;
+    height: 10%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.amarelo{
+    background-color: yellow;
+    height: 100%;
+    width: 20%;    
+}
+
+.laranja {
+    background-color: orange;
+    height: 100%;
+    width: 80%;
+}
+
+header.azul {
+    background-color: blue;
+    width: 100%;
+    height: 100%;    
+}
+
+.azul {
+    background-color: blue;
+    width: 100%;
+    height: 70%;  
+}
+
+.cinza {
+    background-color: grey;
+    width: 100%;
+    height: 70%;  
+}
+.vermelho {
+    background: red;
+    height: 20%;
+    width: 100%;
+}
+
