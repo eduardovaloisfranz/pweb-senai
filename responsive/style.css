@@ -5,49 +5,126 @@ html, body {
 }
 
 header, main, footer {
-    display: flex;         
+    display: flex;
 }
 
 header {
     margin: 0 auto;
-    height: 10%;
+    height: 20%;
     width: 100%;
     flex-wrap: wrap;
 }
 
+main {
+    margin: 0 auto;
+    height: 45%;
+    max-width: 100%;
+    flex: 1;
+}
+
+footer {
+    margin: 0 auto;
+    height: 35%;
+    max-width: 100%;
+    margin: 10px;    
+    /* width: 100%; */
+}
+
+footer div {
+    margin: 10px;
+    height: calc(100% - 20px);
+}
+    
+
+header div {
+    margin: 10px;
+    height: 100%;
+}
 
 .amarelo{
     background-color: yellow;
-    height: 100%;
-    width: 20%;    
+    height: calc(40% - 20px);
+    width: calc(20% - 20px);
 }
 
 .laranja {
     background-color: orange;
-    height: 100%;
-    width: 80%;
+    height: calc(40% - 20px);
+    width: calc(80% - 20px);
+}
+.vermelho {
+    background: red;
+    height: calc(60% - 20px);
+    width: calc(100% - 20px);
 }
 
-header.azul {
-    background-color: blue;
-    width: 100%;
-    height: 100%;    
+main div.azul {
+    /* pega elementos DIV com a CLASS AZUL dentro do main */
+    background-color: blue;    
+    height: calc(100% - 20px);
+    margin: 10px;
 }
 
 .azul {
-    background-color: blue;
-    width: 100%;
-    height: 70%;  
+    background-color: #34aeeb;
+    width: 100%;    
 }
 
 .cinza {
     background-color: grey;
-    width: 100%;
-    height: 70%;  
-}
-.vermelho {
-    background: red;
-    height: 20%;
-    width: 100%;
+    width: 100%;    
 }
 
+@media (max-width: 435px)
+{
+    header {
+        height: 40%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+   
+    footer {
+        height: 80%;
+        flex-direction: column;        
+        flex-wrap: nowrap;     
+        justify-content: space-around;        
+    } 
+
+    .amarelo {
+        width: calc(100% - 20px);    
+    }
+    .laranja {
+        width: calc(100% - 20px);
+    }
+    .vermelho{
+        width: calc(100% - 20px)
+    }
+    
+    
+    .cinza {
+        width: calc(100% - 20px);                      
+   }
+    footer .azul {
+        width: calc(100% - 20px);                            
+    }
+
+}
+
+@media (min-width: 436px) and (max-width: 850px){
+    footer {
+        flex-wrap: wrap;                
+        height: 60%;
+        justify-content: space-between;        
+    }
+
+    .cinza {
+        width: calc(50% - 20px); 
+        height: calc(50% - 20px);
+   }
+    footer .azul {
+        width: calc(50% - 20px);            
+        height: calc(50% - 20px);           
+    }
+
+}
