@@ -50,8 +50,33 @@ body {
     border-bottom-right-radius: 50%;
     /* box-shadow: inset 0 40px 40px -40px #783c00; */
     border-top: 10px solid #613f01;
-    
+    animation-name: sequisu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 
+}
+@keyframes sequisu{
+    /* 0% {
+        height: 85px
+    }
+    25% {
+       height: 
+    }
+    50% {
+       
+    }
+    75% {
+        
+    }
+    100% {
+       
+    } */
+    to{
+        height: 10px;
+    }
+    from{
+        height: 120px;  
+    }
 }
 
 .flex {
