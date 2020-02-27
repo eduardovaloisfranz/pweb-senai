@@ -51,32 +51,37 @@ body {
     /* box-shadow: inset 0 40px 40px -40px #783c00; */
     border-top: 10px solid #613f01;
     animation-name: sequisu;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
 
 }
 @keyframes sequisu{
-    /* 0% {
-        height: 85px
+     0% {
+        height: 0px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
     }
     25% {
-       height: 
+       height: 60px;
+       border-bottom-left-radius: 75%;
+       border-bottom-right-radius: 75%;
     }
     50% {
-       
+       height: 120px;
     }
     75% {
-        
+        height: 60px;
     }
     100% {
-       
-    } */
+       height: 0px;
+    } 
+    /*
     to{
         height: 10px;
     }
     from{
         height: 120px;  
-    }
+    }*/
 }
 
 .flex {
