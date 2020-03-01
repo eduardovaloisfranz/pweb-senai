@@ -8,7 +8,7 @@
  * vai
  */
 
-let sono = false 
+let sono = true 
 const acordar = function() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -45,12 +45,15 @@ const irTrablhar = function() {
     })
 }
 
+
 let trabalhar = acordar().
     then(res => {
         console.log(res)
         return escovarDente()
     }).
-    catch(res => console.log(res)).
+    catch(res => 
+        console.log(res)
+    ).
     then(res => {
         console.log(res)
         return tomarCafe()
@@ -58,3 +61,21 @@ let trabalhar = acordar().
         console.log(res)
         return irTrablhar()
     }).then(res => console.log(res))
+
+
+/*
+let trabalhar2 = acordar().then(res => {
+    console.log(res)
+    return escovarDente()    
+}).catch(res => {
+    console.log(res)
+}).then(res => {
+    console.log(res)   
+    return tomarCafe() 
+}).then(res => {
+    console.log(res)
+    return irTrablhar();
+}).then(res => {
+    console.log(res)
+})
+*/
