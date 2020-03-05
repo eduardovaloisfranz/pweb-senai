@@ -13,9 +13,9 @@
         <input v-model = "nome" type="text" id="campo-nome">
 
         <label for="campo-senha">Senha</label>
-        <input v-model = "email" type="password" id="campo-senha">
+        <input v-model = "senha" type="password" id="campo-senha">
 
-        <p> {{ logado }}</p>
+        <p>{{ logado }}</p>
         <button v-on:click="validarLogin">Login</button>
        
     </div>
@@ -38,20 +38,25 @@
             el: '#app',
             data: {
                 nome: '',
-                email: '',
+                senha: '',
                 logado: ''
             }, 
             methods: {
-                validarLogin: function(){                    
-                  this.padroes.forEach((padrao)=> {
-                    
-                       if(padrao.nome == this.nome && padrao.senha == this.senha){
-                           this.logado = "Logado com sucesso"
-                            return;
-                       }
-                  })   
-                  this.logado = "nao logado"              
+                validarLogin: function(){    
+                    let nome = this.nome
+                    let senha = this.senha
+
+                    let filtered = padroes.filter(function(user) {
+                        return user.nome === nome && user.senha === senha
+                    })
+                  
+                    if (filtered.length) {
+                        this.logado = "Voce está logado";
+                    } else {
+                        this.logado = "Voce não está logado"
+                    }
                 }
+
             }
             
 
