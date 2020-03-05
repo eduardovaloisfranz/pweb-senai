@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> 
+    <title>Cadastro VueJS</title>
+</head>
+<body>
+
+    <div id="app">
+            <label  placeholder="Informe o Nome">Nome</label>
+            <br>
+            <input v-model="nome" type="text">
+        
+            <label  placeholder="Informe o email">Email</label>
+            <input v-model="email" type="text">
+        
+            <button v-on:click="salvar">Salvar</button> 
+            <ul>
+                <li v-for="pessoa in pessoas">
+                   nome:  {{ pessoa.nome}}
+                    email: {{ pessoa.email  }}
+                </li>                
+            </ul>
+
+            <table border="10">
+                <thead>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </thead>
+                <tbody>
+                    <tr v-for="pessoa in pessoas">
+                        <td> {{pessoa.nome}} </td>
+                        <td> {{pessoa.email}} </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr v-if="pessoas.length == 0">
+                        <td colspan = "2">
+                            nenhuma pessoa cadastrada
+                        </td>
+                    </tr>                    
+                </tfoot>
+            </table>
+    </div>   
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                nome: '',
+                email: '',
+                pessoas: []
+            },
+            methods: {
+                salvar: function() {
+                    console.log(this.nome)                    
+                    this.pessoas.push({
+                        nome: this.nome,
+                        email: this.email
+                        
+                    })
+                }
+            }
+        })
+    </script> 
+</body>
+</html>

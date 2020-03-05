@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 1 - Vue</title>
+</head>
+<body>
+    <div id="app">
+    <span v-bind:title="dica">{{ helloWorld }}</span>      
+    <input type="text" v-model="helloWorld">      
+    <button v-on:click="digaOi">Clique aqui</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                helloWorld: "Meu primeiro projeto vue",
+                dica: "Passando o mouse você visualiza essa mensagem"
+            },
+            methods: {
+                digaOi: function() {
+                    this.helloWorld = "Ola Vue!"
+                }                  
+            }
+        })
+    </script>
+</body>
+</html>

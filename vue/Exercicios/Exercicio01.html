@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> 
+    <title>VUE JS Ex01</title>
+</head>
+<body>
+    <div id="app">
+        <label for="campo-nome">Nome</label>
+        <input v-model = "nome" type="text" id="campo-nome">
+
+        <label for="campo-senha">Senha</label>
+        <input v-model = "email" type="password" id="campo-senha">
+
+        <p> {{ logado }}</p>
+        <button v-on:click="validarLogin">Login</button>
+       
+    </div>
+    <script>
+        let padroes = [{
+            nome: "admin1",
+            senha: "admin1"
+        },
+        {
+            nome: "admin2",
+            senha:"admin2"
+        },
+        {
+            nome: "admin3",
+            senha: "admin3"
+        }
+    ]       
+
+        let app = new Vue({
+            el: '#app',
+            data: {
+                nome: '',
+                email: '',
+                logado: ''
+            }, 
+            methods: {
+                validarLogin: function(){                    
+                  this.padroes.forEach((padrao)=> {
+                    
+                       if(padrao.nome == this.nome && padrao.senha == this.senha){
+                           this.logado = "Logado com sucesso"
+                            return;
+                       }
+                           
+                   
+                  })   
+                  this.logado = "nao logado"              
+                }
+            }
+            
+
+        })
+    </script>
+</body>
+</html>
