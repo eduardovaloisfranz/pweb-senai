@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> 
+    <title>Exercicio 02 VUE JS</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="num1" type="number" placeholder = "num1">
+        <input v-model="num2" type="number" placeholder = "num2">        
+        <button @click="somar()">+</button>
+        <button @click="subtracao()">-</button>
+        <button @click="multiplicacao()">*</button>        
+        <button @click="divisao()">/</button>
+        
+        <p>{{ resultado }}</p>        
+    </div>  
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                num1: 0,
+                num2: 0 ,                
+                resultado: 0
+            },
+            methods: {                
+                somar: function() {
+                    this.resultado = parseInt(this.num1) + parseInt(this.num2);
+                },
+                subtracao: function() {
+                    this.resultado = parseInt(this.num1) - parseInt(this.num2);
+                },
+                multiplicacao: function() {
+                    this.resultado = parseInt(this.num1) * parseInt(this.num2);
+                },
+                divisao: function(){
+                    this.resultado = parseInt(this.num1) / parseInt(this.num2);
+                }                
+            }
+        })        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script> 
+    <title>Ex 03 - VueJS</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li></li>
+        </ul>       
+    </div>
+</body>
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                produtos: []
+            },
+            beforeMount() {
+                    fetch("https://api.myjson.com/bins/16pfie").then(res => {                        
+                        return res.json()                        
+                    }).then(json => {                        
+                        this.produtos = json.produtos;                        
+                    }).catch(res => console.log(res))
+                }           
+        })
+    </script>
+</html>
