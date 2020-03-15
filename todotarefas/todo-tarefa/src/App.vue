@@ -1,62 +1,107 @@
 <template>
   <div id="app">
-    <statusTarefas id="statusTarefa" :porcentagem="calcularPorcentagem()"/>    
-    <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa"/> 
-    <listTarefas :tarefas="tarefas"/>
+    <statusTarefas id="statusTarefa" :porcentagem="calcularPorcentagem()" />
+    <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
+    <!-- <ul> -->
+      <!-- <li :v-for="tarefa in this.tarefas"></li> -->
+    <!-- </ul> -->
+    
+    
+    <listTarefas :tarefas="this.tarefas"/>
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import statusTarefas from './components/statusTarefas.vue'
-import cadastrarTarefa from './components/cadastrarTarefa'
-import listTarefas from './components/listTarefas.vue'
+import statusTarefas from "./components/statusTarefas.vue";
+import cadastrarTarefa from "./components/cadastrarTarefa";
+import listTarefas from "./components/listTarefas.vue";
 
 export default {
-  name: 'App',  
+  name: "App",
   components: {
-  //  HelloWorld
-  statusTarefas,
-  cadastrarTarefa,
-  listTarefas
-  },data(){
+    //  HelloWorld
+    statusTarefas,
+    cadastrarTarefa,
+    listTarefas
+  },
+  data() {
     return {
-      tarefas: [{
-        title: 'Lavar a louça',
-        isCompleted: false
-      },
-      {
-        title: 'lavar carro',
-        isCompleted: true
-      },{
-        title: 'Pagar conta de luz',
-        isCompleted: false
-      }, {
-        title: 'Compra frutas da semana',
-        isCompleted: false
-      },{
-        title: 'Matricular os filhos no inglês',
-        isCompleted: true
-      }
+      tarefas: [
+        {
+          title: "Lavar a louça",
+          isCompleted: false
+        },
+        {
+          title: "lavar carro",
+          isCompleted: true
+        },
+        {
+          title: "Pagar conta de luz",
+          isCompleted: false
+        },
+        {
+          title: "Compra frutas da semana",
+          isCompleted: false
+        },
+        {
+          title: "Fazer coisas",
+          isCompleted: true
+        },
+        {
+          title: "kkkkisso ai",
+          isCompleted: true
+        },
+        {
+          title: "sem ideia",
+          isCompleted: true
+        },
+        {
+          title: "quero testar",
+          isCompleted: true
+        },
+        {
+          title: "so mais algum",
+          isCompleted: true
+        },
+        {
+          title: "Acabooou",
+          isCompleted: true
+        }
+
       ],
-      porcentagem: this.calcularPorcentagem()
-    }
+      porcentagem: this.calcularPorcentagem(),      
+    };
   },
   methods: {
-      cadastrarTarefa(tarefa){             
-          this.tarefas.push(tarefa);
-      },      
-      calcularPorcentagem(){
-            //let qtdTarefas = this.tarefas.length;            
-            //console.log(this.tarefas.length)
-            //console.log(tarefas)
-            return 90;
-      }
+    cadastrarTarefa(tarefa) {
+      this.tarefas.push({
+        title: tarefa.title,
+        isCompleted: true
+      });
+    },    
+    calcularPorcentagem() {
+    //   let qtdTotalTarefas = this.tarefas.length;
+    //   let qtdTotalTarefasFeitas = 0;
+    //   for (let tarefa in this.tarefas) {
+    //     if (tarefa.isCompleted) {
+    //       console.log(tarefa)
+    //       qtdTotalTarefas++;
+    //     }
+    //   }          
+    //  // console.log()
+    //   let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas
+    //   console.log(porcentagemTarefas)
+      //return porcentagemTarefas;
+      return 90
+    },
+    concluirTarefa(tarefa){      
+      this.tarefas.splice(this.tarefas.indexOf(tarefa), 1, { title: tarefa.title, isCompleted: true})
+      
+    }
   }
-}
+};
 </script>
 
 <style>
-
-
 </style>

@@ -1,10 +1,20 @@
 <template>
   <div>
-    <v-btn text color="deep-purple accent-4" @click="testar">Concluir Tarefa</v-btn>
-    <p>{{this.tarefas.length}}</p>
-    <!-- <li :v-for="tarefa in tarefas">
-      <ul>{{this.tarefa[tarefa].title}}</ul>
-    </li> -->
+    <!-- <v-btn text color="deep-purple accent-4" @click="testar">Concluir Tarefa</v-btn> -->
+    
+    
+  <p>{{this.tarefas}}</p>
+
+    
+    <br />
+    <!-- <ul>
+      <li       
+       :v-for="(tarefa, key) in tarefas"
+        v-bind:key= key,
+        v-bind:title: tarefa.title>
+
+      </li>
+    </ul> -->
   </div>
 </template>
 
@@ -15,20 +25,19 @@ export default {
     tarefas: {
       Type: Array,
       required: true
-    }
-  },
-  methods: {
-    testar() {
-      console.log("oi");
-      for (let tarefa in this.tarefas) {
-        console.log("Titulo:" + this.tarefas[tarefa].title + "Key: " + tarefa);
+    },
+    data(){
+      return {
+        tarefa: Object,
+        key: Number
       }
+    },
+    methods: {
+     
     }
   }
 };
 </script>
 
 <style>
-
-
 </style>
