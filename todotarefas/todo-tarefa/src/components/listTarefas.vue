@@ -9,12 +9,11 @@
     <br />
     <!-- <ul>
       <li       
-       :v-for="(tarefa, key) in tarefas"
-        v-bind:key= key,
-        v-bind:title: tarefa.title>
-
-      </li>
-    </ul> -->
+       :v-for="(tarefa, key) in tarefas">
+        {{'Titulo Tarefa: ' + this.tarefa.title}} + {{'Id: ' + key}}
+       
+       </li>
+    </ul>  -->
   </div>
 </template>
 
@@ -25,16 +24,8 @@ export default {
     tarefas: {
       Type: Array,
       required: true
-    },
-    data(){
-      return {
-        tarefa: Object,
-        key: Number
-      }
-    },
-    methods: {
-     
-    }
+    } 
+    
   }
 };
 </script>
