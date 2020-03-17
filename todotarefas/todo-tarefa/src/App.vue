@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <statusTarefas id="statusTarefa" :porcentagem="calcularPorcentagem()" />
-    <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
+  <v-app>
+    <div id="app">
+      <statusTarefas id="statusTarefa" :porcentagem="calcularPorcentagem()" />
+      <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
 
-    <!-- <listTarefas :v-for="(tarefa.title, tarefa,isCompleted, key) in tarefas" :key="key" :title="tarefa.title" :isCompleted="tarefa.isCompleted" /> -->
-    <list-tarefas :v-for="(index, tarefa) in tarefas" :key:"index" :tarefa:"tarefa" />
-    <!-- <listTarefas :title="tarefas[0].title"/> -->
-  </div>
+      <!-- <listTarefas :v-for="(tarefa.title, tarefa,isCompleted, key) in tarefas" :key="key" :title="tarefa.title" :isCompleted="tarefa.isCompleted" /> -->
+      <list-tarefas :tarefas="tarefas" />
+      <!-- <listTarefas :title="tarefas[0].title"/> -->
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -14,7 +16,6 @@
 import statusTarefas from "./components/statusTarefas.vue";
 import cadastrarTarefa from "./components/cadastrarTarefa";
 import listTarefas from "./components/listTarefas.vue";
-
 export default {
   name: "App",
   components: {
@@ -78,19 +79,22 @@ export default {
       });
     },
     calcularPorcentagem() {
-      //   let qtdTotalTarefas = this.tarefas.length;
-      //   let qtdTotalTarefasFeitas = 0;
-      //   for (let tarefa in this.tarefas) {
-      //     if (tarefa.isCompleted) {
-      //       console.log(tarefa)
-      //       qtdTotalTarefas++;
-      //     }
-      //   }
-      //  // console.log()
-      //   let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas
-      //   console.log(porcentagemTarefas)
-      //return porcentagemTarefas;
-      return 90;
+      console.log("oi?")     
+      console.log(this.tarefas[0].title) 
+      
+      
+         let qtdTotalTarefas = this.tarefas.length;
+         let qtdTotalTarefasFeitas = 0;
+         for (let tarefa in this.tarefas) {
+          if (tarefa.isCompleted) {
+             console.log(tarefa)
+             qtdTotalTarefas++;
+           }
+         }
+        // console.log()
+         let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas
+         console.log(porcentagemTarefas)
+      return porcentagemTarefas;      
     },
     concluirTarefa(tarefa) {
       this.tarefas.splice(this.tarefas.indexOf(tarefa), 1, {
