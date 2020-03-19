@@ -5,7 +5,7 @@
       <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
 
       <!-- <listTarefas :v-for="(tarefa.title, tarefa,isCompleted, key) in tarefas" :key="key" :title="tarefa.title" :isCompleted="tarefa.isCompleted" /> -->
-      <list-tarefas :tarefas="tarefas" @emit-click="concluirTarefa()"/>
+      <list-tarefas :tarefas="tarefas" @emit-click="concluirTarefa"/>
       <!-- <listTarefas :title="tarefas[0].title"/> -->
     </div>
   </v-app>
@@ -72,14 +72,13 @@ export default {
     };
   },
   methods: {
-    cadastrarTarefa(tarefa) {
-      this.tarefas.push({
-        title: tarefa.title,
-        isCompleted: false
-      });
+    cadastrarTarefa(tarefa) {          
+      this.tarefas.push(tarefa)         
+      console.log(this.tarefas)
+        
+      
     },
-    calcularPorcentagem: function() {
-        console.log(this.tarefas)
+    calcularPorcentagem: function() {        
         let qtdTotalTarefas = 0;
         let qtdTotalTarefasFeitas = 0;       
         for(let index in this.tarefas){
@@ -91,12 +90,20 @@ export default {
       let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas      
       return porcentagemTarefas;      
     },
-    concluirTarefa: function(index){
-      console.log(this.tarefas[index].title)
+    concluirTarefa(index){     
+      //console.log(index)
+      
+      //console.log(this.tarefas[index].title)
       let novoObjeto = this.tarefas[index];
-      console.log(novoObjeto)
-      novoObjeto.isCompleted = true;
-      console.log(novoObjeto)
+      if(this.tarefas[index].isCompleted){
+        novoObjeto.isCompleted = false;
+      }else{
+        novoObjeto.isCompleted = true
+      }
+     
+      
+      //console.log(novoObjeto)      
+      
       this.tarefas.splice(index, 1, novoObjeto)
       
     }

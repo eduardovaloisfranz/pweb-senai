@@ -20,7 +20,7 @@ export default {
       ],
       tarefa: [{
           title: String,
-          completed: true
+          completed: false
       }]
     };
   },
