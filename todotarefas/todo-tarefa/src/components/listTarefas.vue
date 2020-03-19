@@ -7,12 +7,21 @@
 
   <div class="flex container">
     <div v-for="(tarefa, index) in tarefas" v-bind:key="index">
-      <v-card class="mx-auto v-card-item">
+      
+      <v-card class="mx-auto v-card-item green" :v-if="tarefa.isCompleted == true">
         <v-card-text>          
           <p class="display-1 text--primary">Tarefa: {{tarefa.title}}</p>                    
         </v-card-text>
         <v-card-actions>
-          <v-btn text color="deep-purple accent-4">Concluir Tarefa</v-btn>
+          <v-btn @click.stop.prevent="emitClick(index)" text color="deep-purple accent-4">Concluir Tarefa</v-btn>
+        </v-card-actions>        
+      </v-card>
+      <v-card class="mx-auto v-card-item green" :v-else-if="tarefa.isCompleted == false">
+        <v-card-text>          
+          <p class="display-1 text--primary">Tarefa: {{tarefa.title}}</p>                    
+        </v-card-text>
+        <v-card-actions>
+          <v-btn @click.stop.prevent="emitClick(index)" text color="deep-purple accent-4">Concluir Tarefa</v-btn>
         </v-card-actions>
       </v-card>
     </div>
@@ -28,6 +37,11 @@ export default {
   props: ["tarefas"],
   data() {
     return {};
+  },
+  methods: {
+    emitClick(index){      
+      this.$emit('emit-click', index)
+    }
   }
 };
 </script>

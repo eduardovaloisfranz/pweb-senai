@@ -1,17 +1,19 @@
 <template>
   <div id="">
     <div id="" class="">
-      <h1>Tarefas
-        {{porcentagem}}
+      <h1 class="dark--text text-center">Tarefas
+        
       </h1>
     </div>
     <br>
    <v-progress-linear
-      height="10"
+      height="40"
       :value="porcentagem"
       striped
-      color="lime"
-    ></v-progress-linear>
+      color="lime"      
+    >
+    <span class="white--text">{{porcentagem + '%'}}</span>
+    </v-progress-linear>
   </div>
 </template>
 
@@ -38,8 +40,5 @@ export default {
 
 .center {
   justify-content: center;
-}
-h1 {
-  color: grey;
 }
 </style>

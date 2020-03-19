@@ -5,7 +5,7 @@
       <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
 
       <!-- <listTarefas :v-for="(tarefa.title, tarefa,isCompleted, key) in tarefas" :key="key" :title="tarefa.title" :isCompleted="tarefa.isCompleted" /> -->
-      <list-tarefas :tarefas="tarefas" />
+      <list-tarefas :tarefas="tarefas" @emit-click="concluirTarefa()"/>
       <!-- <listTarefas :title="tarefas[0].title"/> -->
     </div>
   </v-app>
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       tarefas: [
-        {
+        {          
           title: "Lavar a louça",
           isCompleted: false
         },
@@ -75,32 +75,30 @@ export default {
     cadastrarTarefa(tarefa) {
       this.tarefas.push({
         title: tarefa.title,
-        isCompleted: true
+        isCompleted: false
       });
     },
-    calcularPorcentagem() {
-      console.log("oi?")     
-      console.log(this.tarefas[0].title) 
-      
-      
-         let qtdTotalTarefas = this.tarefas.length;
-         let qtdTotalTarefasFeitas = 0;
-         for (let tarefa in this.tarefas) {
-          if (tarefa.isCompleted) {
-             console.log(tarefa)
-             qtdTotalTarefas++;
-           }
+    calcularPorcentagem: function() {
+        console.log(this.tarefas)
+        let qtdTotalTarefas = 0;
+        let qtdTotalTarefasFeitas = 0;       
+        for(let index in this.tarefas){
+         qtdTotalTarefas++;
+         if(this.tarefas[index].isCompleted === true){
+           qtdTotalTarefasFeitas++;
          }
-        // console.log()
-         let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas
-         console.log(porcentagemTarefas)
+      }
+      let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas      
       return porcentagemTarefas;      
     },
-    concluirTarefa(tarefa) {
-      this.tarefas.splice(this.tarefas.indexOf(tarefa), 1, {
-        title: tarefa.title,
-        isCompleted: true
-      });
+    concluirTarefa: function(index){
+      console.log(this.tarefas[index].title)
+      let novoObjeto = this.tarefas[index];
+      console.log(novoObjeto)
+      novoObjeto.isCompleted = true;
+      console.log(novoObjeto)
+      this.tarefas.splice(index, 1, novoObjeto)
+      
     }
   }
 };
