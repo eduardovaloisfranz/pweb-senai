@@ -38,42 +38,18 @@ export default {
         {
           title: "Pagar conta de luz",
           isCompleted: false
-        },
-        {
-          title: "Compra frutas da semana",
-          isCompleted: false
-        },
-        {
-          title: "Fazer coisas",
-          isCompleted: true
-        },
-        {
-          title: "kkkkisso ai",
-          isCompleted: true
-        },
-        {
-          title: "sem ideia",
-          isCompleted: true
-        },
-        {
-          title: "quero testar",
-          isCompleted: true
-        },
-        {
-          title: "so mais algum",
-          isCompleted: true
-        },
-        {
-          title: "Acabooou",
-          isCompleted: true
         }
       ],
       porcentagem: this.calcularPorcentagem()
     };
   },
   methods: {
-    cadastrarTarefa(tarefa) {          
-      this.tarefas.push(tarefa)         
+    cadastrarTarefa(title) {  
+      let obj = {
+        title: title,
+        isCompleted: false
+      }
+      this.tarefas.push(obj)         
       console.log(this.tarefas)
         
       

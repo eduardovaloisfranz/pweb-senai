@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-text-field
-      v-model="tarefa.title"
+      v-model="title"
       label="Cadastrar Tarefa"
       :rules="rules"
       hide-details="auto"
@@ -18,15 +18,13 @@ export default {
         value => !!value || "Tarefa é requirido!.",
         value => (value && value.length >= 3) || "Minimo 3 caracteres"
       ],
-      tarefa: [{
-          title: String,
-          completed: false
-      }]
+     title: String()
     };
   },
   methods: {
-    cadastrarTarefa() {
-      this.$emit("cadastrar-tarefa", this.tarefa);
+    cadastrarTarefa() {        
+      this.$emit("cadastrar-tarefa", this.title);
+
     }
   }
 };

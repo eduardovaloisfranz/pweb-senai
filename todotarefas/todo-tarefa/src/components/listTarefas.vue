@@ -6,7 +6,7 @@
 
   <div class="flex container">
     <div v-for="(tarefa, index) in tarefas" v-bind:key="index">
-      <v-card class="mx-auto v-card-item green">
+      <v-card :class="style('mx-auto v-card-item', tarefa.isCompleted)">
         <v-card-text>
           <h1>{{tarefa.isCompleted}}</h1>
           <p class="display-1 text--primary">Tarefa: {{tarefa.title}}</p>
@@ -35,14 +35,22 @@ export default {
         return el.isCompleted === true;
       }),
       tarefasNaoConcluidas: this.tarefas.filter(function(el) {
-        return el.isCompleted === false
+        return el.isCompleted === false;
       })
-    }
+    };
   },
   methods: {
-    emitClick(index) {    
+    emitClick(index) {
       this.$emit("emit-click", index);
-      
+    },
+    style(style, isCompleted){
+      let estilo = style;
+      if(isCompleted === true){
+        estilo+= " green"
+      }else{
+        estilo+= " red"
+      }
+      return estilo;
     }
   }
 };
