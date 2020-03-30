@@ -7,7 +7,7 @@ const axios = require('axios');
 axios.get('https://jsonplaceholder.typicode.com/todos/')
   .then(function (response) {
     // handle success
- 
+
     todos.push(JSON.parse(JSON.stringify(response.data)));
     /*
     todos.push({
@@ -28,4 +28,3 @@ axios.get('https://jsonplaceholder.typicode.com/todos/')
   });
 
 
-  
