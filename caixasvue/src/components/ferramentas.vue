@@ -54,6 +54,7 @@ export default {
         conteudo: this.novaCaixa.conteudo,
         estilo: this.novaCaixa.estilo
       };
+      console.log(obj);
       this.$emit("alterar-caixa", obj);
     }
   }

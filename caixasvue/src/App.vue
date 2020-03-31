@@ -1,14 +1,12 @@
 <template>
-  <!-- App.vue -->
-
   <v-app>
     <v-content>
+      <h1 class="display-1 text-center">Lista de Caixas</h1>
       <v-container fluid>
         <caixas :caixas="caixas" @adicionar-caixa="adicionarCaixa" @apagar-caixa="apagarCaixa" />
         <ferramentas :caixas="caixas" @alterar-caixa="alterarCaixa" />
       </v-container>
     </v-content>
-    <!-- -->
   </v-app>
 </template>
 
