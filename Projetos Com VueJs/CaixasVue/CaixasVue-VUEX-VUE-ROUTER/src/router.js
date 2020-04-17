@@ -19,6 +19,10 @@ export default new VueRouter({
                     component: Ferramentas
                 }
             ]
+        },
+        {
+            path: "*",
+            redirect: '/'
         }
     ]
 })

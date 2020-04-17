@@ -1,0 +1,48 @@
+{
+    "PLACAS": [
+        {
+            "PLACA": "MBL 5544",
+            "LOCALIDADE": "SC-BLUMENAU",
+            "DADOS_INFRACAO": {
+                "DATAHORA": "2020-04-20T09:43:22",
+                "TIPO": "VELOCIDADE",
+                "VALOR": 190,
+                "VEL_MAXIMA": 80
+            }
+        },
+        {
+            "PLACA": "AAB 1327",
+            "LOCALIDADE": "SP-SÃO PAULO",
+            "DADOS_INFRACAO": {
+                "DATAHORA": "2018-03-16T23:22:22",
+                "TIPO": "FAROL VERMELHO"
+            }
+        },
+        {
+            "PLACA": "CAV 3548",
+            "LOCALIDADE": "PE-RECIFE",
+            "DADOS_INFRACAO": {
+                "DATAHORA": "2019-01-20T12:11:22",
+                "TIPO": "ULTRAPASSAGEM PROIBIDA"
+            }
+        },
+        {
+            "PLACA": "PPR 4800",
+            "LOCALIDADE": "GO-GOIANIA",
+            "DADOS_INFRACAO": {
+                "DATAHORA": "2018-12-20T14:02:22",
+                "TIPO": "ESTACIONAR EM LOCAL PROIBIDO"
+            }
+        },
+        {
+            "PLACA": "ASA 1122",
+            "LOCALIDADE": "SP-MOGI DAS CRUZES",
+            "DADOS_INFRACAO": {
+                "DATAHORA": "2019-01-20T15:21:22",
+                "TIPO": "VELOCIDADE",
+                "VALOR": 90,
+                "VEL_MAXIMA": 80
+            }
+        }
+    ]
+}
