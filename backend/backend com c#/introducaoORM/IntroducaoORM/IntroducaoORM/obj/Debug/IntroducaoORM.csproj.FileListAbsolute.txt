@@ -1,0 +1,11 @@
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\IntroducaoORM.exe.config
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\IntroducaoORM.exe
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\IntroducaoORM.pdb
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\obj\Debug\IntroducaoORM.csprojAssemblyReference.cache
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\obj\Debug\IntroducaoORM.exe
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\obj\Debug\IntroducaoORM.pdb
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\EntityFramework.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\EntityFramework.xml
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\introducaoORM\IntroducaoORM\IntroducaoORM\obj\Debug\IntroducaoORM.csproj.CopyComplete
