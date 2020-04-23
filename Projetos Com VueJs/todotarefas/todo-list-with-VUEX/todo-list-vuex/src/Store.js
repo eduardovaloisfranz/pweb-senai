@@ -36,9 +36,14 @@ export default new Vuex.Store({
     mutations: {
         ADD_TODO(state, payload) {
             state.todos.push(payload)
+            localStorage.todos = JSON.stringify(state.todos);
         },
         CONCLUIR_TODO(state, payload) {
             Vue.set(state.todos, payload.idx, payload.obj)
+            localStorage.todos = JSON.stringify(state.todos);
+        },
+        SETAR_ARRAY(state, payload) {
+            state.todos = payload;
         }
     },
     actions: {
