@@ -14,13 +14,40 @@ namespace IntroducaoORM
         {
             //Program.inicioAula();
             //Program.ConsultasLinq();
-            Program.ConsultasLinqRelacionadas(40);
+            //Program.ConsultasLinqRelacionadas(40);
+            //Program.ExibirCargoPorId(1);
             //Program.popularBanco();
+            Program.retornarJoin();
+        }
+
+        private static void retornarJoin()
+        {
+            var joinCargos = from cargo in bd.cargos
+                             join func in bd.funcionarios on cargo.id equals func.fk_cargo
+                             select new { nomeFuncionario = func.nome, idadeFuncionario = func.idade, cargo = func.cargos };
+           
+            joinCargos.ToList().ForEach(el => {
+                Console.WriteLine("nomeFuncionario: " + el.nomeFuncionario + " idadeFuncionario: " + el.idadeFuncionario + " cargos: " + el.cargo.funcionarios + "");
+                /* cargo: {
+                     'id" : 1,
+                    'nome': 'algo'
+                    }
+                 */
+              
+            });
+
+        }
+
+        private static void ExibirCargoPorId(int id)
+        {
+            funcionarios func = bd.funcionarios.Find(12);
+            Console.WriteLine(func.fk_cargo);
+            Console.WriteLine(bd.cargos.Find(func.fk_cargo).nome);
         }
 
         private static void ConsultasLinqRelacionadas(int idade)
         {
- var joinCargos = from cargo in bd.cargos
+        var joinCargos = from cargo in bd.cargos
                              join func in bd.funcionarios on cargo.id equals func.fk_cargo
                              where func.idade > idade
                              select new { nomeCargo = cargo.nome, nomeFuncionario = func.nome, idadeFuncionario = func.idade };
