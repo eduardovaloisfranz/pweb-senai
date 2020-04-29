@@ -7,8 +7,8 @@
     </b-row>
     <b-row>
       <b-col cols="12" sm="12" md="12" lg="12">
-        <b-progress :max="totalOfTodos" height="2rem">
-          <b-progress-bar :value="percentageTodoCompleted / 10">
+        <b-progress max="100" height="2rem">
+          <b-progress-bar :value="percentageTodoCompleted">
             Progress:
             <strong>{{ percentageTodoCompleted.toFixed(2) }} %</strong>
           </b-progress-bar>

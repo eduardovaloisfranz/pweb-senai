@@ -8,15 +8,15 @@
     <div v-for="(tarefa, index) in tarefas" v-bind:key="index">
       <v-card :class="style('mx-auto v-card-item', tarefa.isCompleted)">
         <v-card-text>
-          <h1>{{tarefa.isCompleted}}</h1>
           <p class="display-1 text--primary">Tarefa: {{tarefa.title}}</p>
         </v-card-text>
-        <v-card-actions>
+        <v-card-actions class="justify-space-between">
           <v-btn
             @click.stop.prevent="emitClick(index)"
             text
             color="deep-purple accent-4"
           >Concluir Tarefa</v-btn>
+          <v-btn @click="excluirTarefa(index)" text color="primary">Remover tarefa</v-btn>
         </v-card-actions>
       </v-card>
     </div>
@@ -43,14 +43,17 @@ export default {
     emitClick(index) {
       this.$emit("emit-click", index);
     },
-    style(style, isCompleted){
+    style(style, isCompleted) {
       let estilo = style;
-      if(isCompleted === true){
-        estilo+= " green"
-      }else{
-        estilo+= " red"
+      if (isCompleted === true) {
+        estilo += " green";
+      } else {
+        estilo += " red";
       }
       return estilo;
+    },
+    excluirTarefa(idx) {
+      this.$emit("excluir-tarefa", idx);
     }
   }
 };

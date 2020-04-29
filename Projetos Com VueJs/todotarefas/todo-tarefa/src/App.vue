@@ -5,7 +5,11 @@
       <cadastrarTarefa @cadastrar-tarefa="cadastrarTarefa" />
 
       <!-- <listTarefas :v-for="(tarefa.title, tarefa,isCompleted, key) in tarefas" :key="key" :title="tarefa.title" :isCompleted="tarefa.isCompleted" /> -->
-      <list-tarefas :tarefas="tarefas" @emit-click="concluirTarefa"/>
+      <list-tarefas
+        :tarefas="tarefas"
+        @emit-click="concluirTarefa"
+        @excluir-tarefa="excluirTarefa"
+      />
       <!-- <listTarefas :title="tarefas[0].title"/> -->
     </div>
   </v-app>
@@ -27,7 +31,7 @@ export default {
   data() {
     return {
       tarefas: [
-        {          
+        {
           title: "Lavar a louça",
           isCompleted: false
         },
@@ -44,44 +48,51 @@ export default {
     };
   },
   methods: {
-    cadastrarTarefa(title) {  
+    cadastrarTarefa(title) {
       let obj = {
         title: title,
         isCompleted: false
-      }
-      this.tarefas.push(obj)         
-      console.log(this.tarefas)
-        
-      
+      };
+      this.tarefas.push(obj);
+      console.log(this.tarefas);
     },
-    calcularPorcentagem: function() {        
-        let qtdTotalTarefas = 0;
-        let qtdTotalTarefasFeitas = 0;       
-        for(let index in this.tarefas){
-         qtdTotalTarefas++;
-         if(this.tarefas[index].isCompleted === true){
-           qtdTotalTarefasFeitas++;
-         }
+    calcularPorcentagem: function() {
+      let qtdTotalTarefas = 0;
+      let qtdTotalTarefasFeitas = 0;
+      for (let index in this.tarefas) {
+        qtdTotalTarefas++;
+        if (this.tarefas[index].isCompleted === true) {
+          qtdTotalTarefasFeitas++;
+        }
       }
-      let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas      
-      return porcentagemTarefas;      
+      let porcentagemTarefas = (qtdTotalTarefasFeitas * 100) / qtdTotalTarefas;
+      return porcentagemTarefas;
     },
-    concluirTarefa(index){     
+    concluirTarefa(index) {
       //console.log(index)
-      
+
       //console.log(this.tarefas[index].title)
       let novoObjeto = this.tarefas[index];
-      if(this.tarefas[index].isCompleted){
+      if (this.tarefas[index].isCompleted) {
         novoObjeto.isCompleted = false;
-      }else{
-        novoObjeto.isCompleted = true
+      } else {
+        novoObjeto.isCompleted = true;
       }
-     
-      
-      //console.log(novoObjeto)      
-      
-      this.tarefas.splice(index, 1, novoObjeto)
-      
+
+      //console.log(novoObjeto)
+
+      this.tarefas.splice(index, 1, novoObjeto);
+    },
+    excluirTarefa(idx) {
+      let excluir = confirm(
+        "Deseja a tarefa: " + this.tarefas[idx].title + " ?"
+      );
+      if (excluir) {
+        this.tarefas.splice(idx, 1);
+        alert("tarefa apagada com sucesso");
+      } else {
+        alert("Tarefa não apagada");
+      }
     }
   }
 };
