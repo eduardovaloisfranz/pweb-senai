@@ -9,7 +9,9 @@
 <body>
     <div id="app">
         <ul>
-            <li></li>
+            <li v-for="(produto, idx) in produtos" :key=produto + idx>
+                {{produto}}
+            </li>
         </ul>       
     </div>
 </body>

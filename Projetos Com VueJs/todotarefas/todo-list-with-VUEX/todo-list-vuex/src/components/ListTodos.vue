@@ -9,7 +9,7 @@
           v-for="(todo, idx) in listOfTodos"
           :key="todo.id"
           class="m-3"
-          :class="todo.isCompleted === true ? 'bg-success' : 'bg-danger'"
+          :class="{completed : todo.isCompleted, pending: !todo.isCompleted}"
         >
           <div class="d-flex justify-content-end">
             <i
@@ -74,6 +74,7 @@ export default {
         });
 
       if (confirm) {
+        this.finishTodo(this.selectedTodo);
         this.showModal = false;
         this.selectedTodo = "";
       }
@@ -108,5 +109,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.pending {
+  background: red;
+}
+.completed {
+  background: green;
+}
 </style>

@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4daa5f6a9056490a8b3536cfa0702855" Name="Diagram1">
-        <EntityTypeShape EntityType="empresaModel.cargos" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="empresaModel.cargos" Width="1.5" PointX="5.375" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="empresaModel.funcionarios" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="empresaModel.FK_cargo_funcionario" ManuallyRouted="false" />
       </Diagram>

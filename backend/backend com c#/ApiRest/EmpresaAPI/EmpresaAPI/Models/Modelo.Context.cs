@@ -17,7 +17,7 @@ namespace EmpresaAPI.Models
     {
         public empresaEntities()
             : base("name=empresaEntities")
-        {
+        {    
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

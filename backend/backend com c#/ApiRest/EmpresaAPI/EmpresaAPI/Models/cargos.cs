@@ -14,16 +14,7 @@ namespace EmpresaAPI.Models
     
     public partial class cargos
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public cargos()
-        {
-            this.funcionarios = new HashSet<funcionarios>();
-        }
-    
         public int id { get; set; }
         public string nome { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<funcionarios> funcionarios { get; set; }
     }
 }

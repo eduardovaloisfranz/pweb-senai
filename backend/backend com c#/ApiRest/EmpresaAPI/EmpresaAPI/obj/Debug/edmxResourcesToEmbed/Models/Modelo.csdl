@@ -6,7 +6,6 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="funcionarios" Relationship="Self.FK_cargo_funcionario" FromRole="cargos" ToRole="funcionarios" />
   </EntityType>
   <EntityType Name="funcionarios">
     <Key>

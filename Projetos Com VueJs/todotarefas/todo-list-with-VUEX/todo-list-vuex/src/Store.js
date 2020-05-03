@@ -36,18 +36,18 @@ export default new Vuex.Store({
   mutations: {
     ADD_TODO(state, payload) {
       state.todos.push(payload);
-      localStorage.todos = JSON.stringify(state.todos);
+      //localStorage.todos = JSON.stringify(state.todos);
     },
     FINISH_TODO(state, payload) {
       Vue.set(state.todos, payload.idx, payload.obj);
-      localStorage.todos = JSON.stringify(state.todos);
+      //localStorage.todos = JSON.stringify(state.todos);
     },
     SETAR_ARRAY(state, payload) {
       state.todos = payload;
     },
     REMOVE_TODO(state, payload) {
       state.todos.splice(payload, 1);
-      localStorage.todos = JSON.stringify(state.todos);
+      //localStorage.todos = JSON.stringify(state.todos);
     },
   },
   actions: {

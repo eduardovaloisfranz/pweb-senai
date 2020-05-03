@@ -16,28 +16,13 @@ namespace EmpresaAPI.Controllers
         // GET: api/Funcionario
         public IEnumerable<dynamic> Get()
         {
-            //var funcionarios = from func in db.funcionarios
-            //                       //select new { nomeFuncionario = func.nome, idadeFuncionario = func.idade, nomeCargo = func.cargos.nome, idCargo = func.cargos.id};
-            //                   select func;
-            //var funcionarios = from func in db.funcionarios
-            //                   join cargo in db.cargos on func.fk_cargo equals cargo.id
-            //                   select new { nomeFuncionario = func.nome, idadeFuncionario = func.idade, cargo = func.cargos };            
-
-            //var joinCargos = from cargo in db.cargos
-            //                 join func in db.funcionarios on cargo.id equals func.fk_cargo
-            //                 select new { nomeFuncionario = func.nome, idadeFuncionario = func.idade, cargo = func.cargos };            
-
             var funcionarios = from func in db.funcionarios
-                               select func;
-            funcionarios.ToList().ForEach(el => {
-                el.cargos = new cargos()
-                {
-                    id = db.cargos.Find(el.fk_cargo).id,
-                    nome = db.cargos.Find(el.fk_cargo).nome                 
-                };
-            });
+                               join cargo in db.cargos on func.fk_cargo equals cargo.id
+                               select new { id = func.id, nome = func.nome, fk_cargo = func.fk_cargo, cargo = func.cargos };
+
             return funcionarios;
-            //return joinCargos;            
+
+            //join prod in products on category.ID equals prod.CategoryID
         }
 
         // GET: api/Funcionario/5
@@ -123,6 +108,6 @@ namespace EmpresaAPI.Controllers
             db.SaveChanges();
             return func;
            
-        }
+        }     
     }
 }

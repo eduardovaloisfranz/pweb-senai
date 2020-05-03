@@ -1,12 +1,17 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
-export default VueRouter({
-    mode: history,
-    routes: [
-        {
+import Index from "@/views/index";
 
-        }
-    ]
-})
+Vue.use(VueRouter);
+export default new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: "/",
+      name: "index",
+      component: Index,
+    },
+  ],
+});
