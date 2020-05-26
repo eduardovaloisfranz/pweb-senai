@@ -3,7 +3,7 @@
     <CadastroFuncionario />
     <b-row>
       <b-col cols="12" sm="12" md="12" lg="12" class="d-flex justify-content-end">
-        <div>teste</div>
+        
       </b-col>
     </b-row>
     <b-row>
