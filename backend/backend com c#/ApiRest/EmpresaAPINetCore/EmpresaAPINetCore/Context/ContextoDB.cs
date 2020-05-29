@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using EmpresaAPINetCore.Models;
+using Microsoft.EntityFrameworkCore.Proxies;
 
 namespace EmpresaAPINetCore.Context
 {
@@ -11,7 +12,7 @@ namespace EmpresaAPINetCore.Context
     {
         public ContextoDB(DbContextOptions<ContextoDB> options) : base(options)
         {
-            
+            //this.ChangeTracker.LazyLoadingEnabled = true;                        
         }
 
 

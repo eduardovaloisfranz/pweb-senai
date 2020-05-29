@@ -7,6 +7,9 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\EmpresaAPINetCore.runtimeconfig.dev.json
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\EmpresaAPINetCore.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\EmpresaAPINetCore.pdb
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\DiscordRPC.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -19,6 +22,7 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -33,6 +37,11 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -51,7 +60,9 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
@@ -112,9 +123,11 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\staticwebassets\EmpresaAPINetCore.StaticWebAssets.Manifest.cache
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\staticwebassets\EmpresaAPINetCore.StaticWebAssets.xml
+C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.AssemblyInfoInputs.cache
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.AssemblyInfo.cs
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.RazorTargetAssemblyInfo.cache
@@ -122,6 +135,3 @@ C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\Empres
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.dll
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.pdb
 C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.csprojAssemblyReference.cache
-C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Castle.Core.dll
-C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
-C:\Users\duduf\Documents\GitHub\pweb-senai\backend\backend com c#\ApiRest\EmpresaAPINetCore\EmpresaAPINetCore\obj\Debug\netcoreapp3.1\EmpresaAPINetCore.MvcApplicationPartsAssemblyInfo.cache

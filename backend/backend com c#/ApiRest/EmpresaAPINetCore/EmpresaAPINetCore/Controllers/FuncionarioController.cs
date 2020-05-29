@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using EmpresaAPINetCore.Context;
 using EmpresaAPINetCore.Models;
+using Microsoft.EntityFrameworkCore.Proxies;
+using Microsoft.AspNetCore.Authorization;
+using EmpresaAPINetCore.Services;
+
 namespace EmpresaAPINetCore.Controllers
 {
     [Route("api/[controller]")]
@@ -18,39 +22,53 @@ namespace EmpresaAPINetCore.Controllers
             _contexto = ctx;
         }
 
+        [HttpPost("login")]
+        public ActionResult login([FromBody] Funcionario func)
+        {
+            Funcionario funcionario = _contexto.Funcionarios.Where(f => f.Email.Equals(func.Email) && f.Senha.Equals(func.Senha)).FirstOrDefault();
+            if(func == null)
+            {
+                return BadRequest("Login invalido");
+            }
+            else
+            {
+               return Ok(TokenService.generateToken(funcionario));
+            }
+        }
+
         // GET: api/Funcionario
         [HttpGet]
-        public IEnumerable<dynamic> Get()
+        [Authorize(Roles = "1")]        
+        public ActionResult Get()
         {
             var funcionarios = _contexto.Funcionarios.ToList();
-            return funcionarios;
+            return Ok(funcionarios);                   
         }
 
         // GET: api/Funcionario/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
+        [Authorize(Roles = "1, 2")]        
         public ActionResult Get(int id)
         {
-            Funcionario func = _contexto.Funcionarios.Find(id);
+            Funcionario func = _contexto.Funcionarios.Find(id);              
             if(func == null)
             {
-                return NotFound("Funcionario não encontrado");
+                return NotFound("Funcionário não encontrado");
             }
             else
             {
                 return Ok(func);
             }       
         }
-
         // POST: api/Funcionario
         [HttpPost]
         public ActionResult Post([FromBody] Funcionario func)
         {
             if (ModelState.IsValid)
-            {
+            {                 
                 _contexto.Funcionarios.Add(func);
-                _contexto.SaveChanges();
+                _contexto.SaveChanges();                
                 return Ok(func);
-
             }
             else
             {
@@ -70,17 +88,18 @@ namespace EmpresaAPINetCore.Controllers
                 {
                     return NotFound("Funcionario não encontrado");
                 }
-                oldFunc = func;
                 try
                 {
-                _contexto.Funcionarios.Update(oldFunc);
+                    oldFunc.Nome = func.Nome;
+                    oldFunc.CargoID = func.CargoID;
+                    oldFunc.Idade = func.Idade;                    
+                    _contexto.SaveChanges();
+                return Ok(oldFunc);
                 }
                 catch(Exception ex)
                 {
                     return BadRequest("Problema ao alterar: " + ex.Message);
                 }
-                _contexto.SaveChanges();
-                return Ok(oldFunc);
             }
             else
             {
