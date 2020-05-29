@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmpresaAPINetCore.Context;
 using EmpresaAPINetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,7 @@ namespace EmpresaAPINetCore.Controllers
         }
         // GET: api/Cargo
         [HttpGet]
+        [Authorize]
         public ActionResult Get()
         {
             return Ok(_contextoDB.Cargos.ToList());            
@@ -27,6 +29,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // GET: api/Cargo/5
         [HttpGet("{id}", Name = "GetCargo")]
+        [Authorize]
         public ActionResult Get(int id)
         {
             Cargo cargo = _contextoDB.Cargos.Find(id);
@@ -39,6 +42,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // POST: api/Cargo
         [HttpPost]
+        [Authorize(Roles ="1")]
         public ActionResult Post([FromBody] Cargo cargo)
         {
             if (ModelState.IsValid)
@@ -60,6 +64,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // PUT: api/Cargo/5
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public ActionResult Put(int id, [FromBody] Cargo cargo)
         {
             Cargo oldCargo = _contextoDB.Cargos.Find(id);
@@ -76,6 +81,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public ActionResult Delete(int id)
         {
             Cargo cargSelec = _contextoDB.Cargos.Find(id);

@@ -25,29 +25,41 @@ namespace EmpresaAPINetCore.Controllers
         [HttpPost("login")]
         public ActionResult login([FromBody] Funcionario func)
         {
-            Funcionario funcionario = _contexto.Funcionarios.Where(f => f.Email.Equals(func.Email) && f.Senha.Equals(func.Senha)).FirstOrDefault();
+            Funcionario funcionario = _contexto.Funcionarios.Where(f => f.Email.Equals(func.Email) && f.Senha.Equals(func.Senha))         
+                .FirstOrDefault();
             if(func == null)
             {
                 return BadRequest("Login invalido");
             }
             else
             {
-               return Ok(TokenService.generateToken(funcionario));
+                var userData = new object[2];
+                userData[0] = TokenService.generateToken(funcionario);
+                userData[1] = funcionario;
+                funcionario.Email = null;
+                funcionario.Senha = null;
+               return Ok(userData);
             }
         }
 
         // GET: api/Funcionario
         [HttpGet]
-        [Authorize(Roles = "1")]        
+        [Authorize]
         public ActionResult Get()
         {
-            var funcionarios = _contexto.Funcionarios.ToList();
+            var funcionarios = _contexto.Funcionarios.Select(x => new
+            {
+                x.Nome,
+                x.Idade,
+                x.Cargo,
+                x.CargoID
+            });
             return Ok(funcionarios);                   
         }
 
         // GET: api/Funcionario/5
         [HttpGet("{id}")]
-        [Authorize(Roles = "1, 2")]        
+        [Authorize]
         public ActionResult Get(int id)
         {
             Funcionario func = _contexto.Funcionarios.Find(id);              
@@ -62,6 +74,7 @@ namespace EmpresaAPINetCore.Controllers
         }
         // POST: api/Funcionario
         [HttpPost]
+        [Authorize(Roles = "1")]
         public ActionResult Post([FromBody] Funcionario func)
         {
             if (ModelState.IsValid)
@@ -79,6 +92,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // PUT: api/Funcionario/5
         [HttpPut("{id}")]
+        [Authorize(Roles = "1")]
         public ActionResult Put(int id, [FromBody] Funcionario func)
         {
             if (ModelState.IsValid)
@@ -109,6 +123,7 @@ namespace EmpresaAPINetCore.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "1")]
         public ActionResult Delete(int id)
         {
             Funcionario func = _contexto.Funcionarios.Find(id);
