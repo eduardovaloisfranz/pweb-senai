@@ -49,6 +49,7 @@ namespace EmpresaAPINetCore.Controllers
         {
             var funcionarios = _contexto.Funcionarios.Select(x => new
             {
+                x.ID,
                 x.Nome,
                 x.Idade,
                 x.Cargo,
@@ -108,6 +109,9 @@ namespace EmpresaAPINetCore.Controllers
                     oldFunc.CargoID = func.CargoID;
                     oldFunc.Idade = func.Idade;                    
                     _contexto.SaveChanges();
+                    oldFunc.Email = null;
+                    oldFunc.Senha = null;
+
                 return Ok(oldFunc);
                 }
                 catch(Exception ex)
