@@ -20,8 +20,15 @@ export default new Vuex.Store({
       state.cargos = payload;
     },
     EDITAR_USUARIO(state, payload) {
-      console.log(payload);
       state.funcionarios.splice(payload.idx, 1, payload.obj);
+    },
+    DELETAR_FUNCIONARIO(state, payload) {
+      console.log(payload.idx);
+      let id = state.funcionarios.findIndex((el) => el.id === payload.idx);
+      state.funcionarios.splice(id, 1);
+    },
+    ADD_FUNCIONARIO(state, payload) {
+      state.funcionarios.push(payload);
     },
   },
   actions: {
@@ -55,6 +62,33 @@ export default new Vuex.Store({
           context.commit("EDITAR_USUARIO", payload);
         })
         .catch((err) => console.log("problema ao alterar registro " + err));
+    },
+    deletarFuncionario(context, payload) {
+      api
+        .delete(`api/funcionario/${payload.idx}`)
+        .then(() => context.commit("DELETAR_FUNCIONARIO", payload))
+        .catch((err) =>
+          console.log("Erro ao tentar deletar o funcionário: " + err)
+        );
+    },
+    addFuncionario(context, payload) {
+      console.log("caiu aqui:");
+      payload.senha = "123";
+
+      api
+        .post("api/funcionario", payload)
+        .then((r) => {
+          let { nome, idade, cargoID, cargo } = r.data;
+          let obj = {
+            nome,
+            idade,
+            cargoID,
+            cargo,
+          };
+          console.log(r.data);
+          context.commit("ADD_FUNCIONARIO", obj);
+        })
+        .catch((err) => console.log("Erro ao adicionar funcionario: " + err));
     },
   },
 });

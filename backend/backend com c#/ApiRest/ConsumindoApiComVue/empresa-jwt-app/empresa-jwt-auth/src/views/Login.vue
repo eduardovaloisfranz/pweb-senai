@@ -62,7 +62,7 @@ export default {
         .post("api/funcionario/login", this.funcionario)
         .then(res => {
           sessionStorage.setItem("token", res.data[0]);
-          //sessionStorage.setItem("usuarioLogado", JSON.stringify(res.data[1]));
+          sessionStorage.setItem("usuarioLogado", JSON.stringify(res.data[1]));
           this.$store.commit("SETAR_USUARIO_LOGADO", res.data[1]);
           alert(
             "Login efetuado com sucesso, redirecionando para a home em alguns segundos"

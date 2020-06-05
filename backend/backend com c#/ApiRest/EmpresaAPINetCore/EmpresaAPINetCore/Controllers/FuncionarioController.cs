@@ -81,7 +81,10 @@ namespace EmpresaAPINetCore.Controllers
             if (ModelState.IsValid)
             {                 
                 _contexto.Funcionarios.Add(func);
-                _contexto.SaveChanges();                
+                _contexto.SaveChanges();
+                func.Email = null;
+                func.Senha = null;
+                func.Cargo = _contexto.Cargos.Find(func.CargoID);
                 return Ok(func);
             }
             else
